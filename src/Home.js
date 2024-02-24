@@ -32,9 +32,11 @@ class Home extends React.Component{
 
    }
    validateLogin=()=>{
-      const index = this.state.users.findIndex((user)=> {return user.userName===this.state.userDetailsLogin.userName})
+      const index = this.state.users.findIndex((user)=>
+      {return user.userName===this.state.userDetailsLogin.userName})
        index!==-1?
-      this.state.users[index].password===this.state.userDetailsLogin.password?alert("hello " + this.state.userDetailsLogin.userName):
+      this.state.users[index].password===this.state.userDetailsLogin.password?
+          alert("hello " + this.state.userDetailsLogin.userName):
           alert("password wrong"):
            alert("user name wrong")
    }
